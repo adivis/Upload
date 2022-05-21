@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+     
+     <link rel="stylesheet" href="css/style.css">
+    <title>Image Uploads</title>
+</head>
+<body>
+    <div class="main-container">
+        <a href="/display" class="goupload">Go to frontend</a>
+        <div class="upload-section">
+
+            <h1>Upload Here</h1>
+            <div class="container w-50">
+        <form  action="/display" method="POST" enctype="multipart/form-data">
+            <div class="custom-file mb-2">
+                <input type="file" name="file" id="file" class="file-input fileinput">
+                <label for="file" class="file-input"></label>
+
+            </div>
+            <div class="custom-file mb-2">
+                <label for="text" class="text-input">Enter text</label>
+                <input type="text" name="file" id="text" class="text-input">
+              
+            </div>
+            <input type="submit" value="Submit" class="btn">
+        </form>
+        
+    </div>
+       
+        </div>
+        <!-- <div class="images">
+            
+                <%if (records.length>0){%>
+                <% records.forEach(function(row){%>
+                <div class="image">
+                    <form action="/deleteImg" method="POST" class="form1" enctype="multipart/form-data">
+                    <img src="uploads/<%= row.imagename %>" alt="image" width="70%" value="file" >
+                    <input type="text" name="uploadimg" value="<%=row.textcontent%>" class="inputtxt" disabled>
+                    <input type="text" name="uploadimg" value="<%=row.imagename%>" class="notShow">
+                    <input type="submit" value="Delete" class="btn-light">
+                    
+                   
+                    <div class="nodisplay" id="show-option">
+                        <div class="custom-file mb-2">
+                            <input type="file" name="file" id="file" class="file-input fileinput">
+                            <label for="file" class="file-input"></label>
+            
+                        </div>
+                        <div class="custom-file mb-2">
+                            <label for="text" class="text-input">Enter text</label>
+                            <input type="text" name="file" id="text" class="text-input">
+                        </div>
+                        <input type="submit" value="Edit" class="btn-light" onclick="showoption()" formaction="/editImg">
+                    </div>
+                    </form>
+                    <input type="submit" value="Edit" class="btn-light" id="editbtn" onclick="showoption()">
+                </div>
+                <%})}%>
+            
+        </div> -->
+    </div>
+</body>
+<script>
+    function showoption(){
+        const editoption = document.getElementById("show-option");
+        editoption.style.display = 'flex';
+        const editbtn = document.getElementById("editbtn");
+        editbtn.style.display = 'none';
+    }
+    </script>
+</html>
